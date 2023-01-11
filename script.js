@@ -8,10 +8,11 @@ function createSquareGrid(sideLength) {
 
         for (let i = 0; i < sideLength; i++) {
             const childDiv = document.createElement('div');
+            childDiv.classList.add('inner-square');
             rowOfDivs.appendChild(childDiv);
         }
         majorContainer.appendChild(rowOfDivs);
     }
 }
 
-createSquareGrid(4);
+createSquareGrid(5);
