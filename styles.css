@@ -19,7 +19,3 @@ body {
 .inner-square {
     flex: 1;
 }
-
-.inner-square:hover {
-    background-color: #ECECEC;
-}
