@@ -5,20 +5,21 @@ body {
 .major-container {
     display: flex;
     flex-direction: column;
+    height: 800px;
+    width: 800;
+    border: 1px solid black;
 }
 
 .row-container {
     display: flex;
     flex-direction: row;
-    flex: 1 1 15px;
+    flex: auto;
 }
 
 .inner-square {
     flex: 1;
-    transition: background-color 0.3s;
-    border: 0.5px solid black;
 }
 
 .inner-square:hover {
-    background-color: rgba(124, 124, 124, 0.548);
+    background-color: #ECECEC;
 }

@@ -16,8 +16,31 @@ function createSquareGrid(sideLength) {
     }
 }
 
+function paintDivBlack(event) {
+    if (event.buttons === 1) {
+        let elementTriggered = event.target;
+        elementTriggered.style.backgroundColor = 'black';
+    }
+}
+
+function linkDivsToListener() {
+    const majorContainer = document.querySelector('.major-container');
+    for (const row of majorContainer.children) {
+        for (const innerDiv of row.children) {
+            innerDiv.addEventListener('mousemove', paintDivBlack);
+        }
+    }
+}
+
 function askSizeOfGrid() {
     let sizeOfGrid = prompt('How big do you want the grid to be? (Maximum of 100)');
     createSquareGrid(sizeOfGrid);
-
+    linkDivsToListener();
 }
+
+
+
+// Para hacer que se linkeen los cuadritos hay que
+// Iterar cada uno, y linkearlo con el event listener mousedown
+// Si se clickea, hay que hacer que se haga negro, y que se mantenga asi
+
