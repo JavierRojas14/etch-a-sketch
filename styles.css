@@ -1,0 +1,9 @@
+.major-container {
+    display: flex;
+    direction: column;
+}
+
+.row-container {
+    display: flex;
+    direction: row;
+}
