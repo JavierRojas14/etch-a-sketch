@@ -17,7 +17,7 @@ function createSquareGrid(sideLength) {
 }
 
 function paintDivBlack(event) {
-    if (event.buttons === 1) {
+    if (event.buttons === 1 || event.type === 'click') {
         let elementTriggered = event.target;
         elementTriggered.style.backgroundColor = 'black';
     }
@@ -28,6 +28,7 @@ function linkDivsToListener() {
     for (const row of majorContainer.children) {
         for (const innerDiv of row.children) {
             innerDiv.addEventListener('mousemove', paintDivBlack);
+            innerDiv.addEventListener('click', paintDivBlack);
         }
     }
 }
