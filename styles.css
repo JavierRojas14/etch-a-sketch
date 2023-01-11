@@ -13,4 +13,9 @@
 .inner-square {
     border: 1px solid black;
     flex: 1;
+    transition: background-color 0.3s;
+}
+
+.inner-square:hover {
+    background-color: rgba(124, 124, 124, 0.548);
 }

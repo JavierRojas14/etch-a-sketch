@@ -15,4 +15,4 @@ function createSquareGrid(sideLength) {
     }
 }
 
-createSquareGrid(5);
+createSquareGrid(4);
