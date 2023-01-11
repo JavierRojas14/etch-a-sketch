@@ -1,5 +1,7 @@
 function createSquareGrid(sideLength) {
     const majorContainer = document.querySelector('.major-container');
+    majorContainer.innerHTML = '';
+
     for (let i = 0; i < sideLength; i++) {
 
         const rowOfDivs = document.createElement('div');
