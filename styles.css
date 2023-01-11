@@ -11,9 +11,9 @@
 }
 
 .inner-square {
-    border: 1px solid black;
     flex: 1;
     transition: background-color 0.3s;
+    border: 0.5px solid black;
 }
 
 .inner-square:hover {

@@ -1,4 +1,3 @@
-
 function createSquareGrid(sideLength) {
     const majorContainer = document.querySelector('.major-container');
     for (let i = 0; i < sideLength; i++) {
@@ -15,4 +14,8 @@ function createSquareGrid(sideLength) {
     }
 }
 
-createSquareGrid(4);
+function askSizeOfGrid() {
+    let sizeOfGrid = prompt('How big do you want the grid to be? (Maximum of 100)');
+    createSquareGrid(sizeOfGrid);
+
+}
