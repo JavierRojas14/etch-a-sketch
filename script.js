@@ -16,19 +16,26 @@ function createSquareGrid(sideLength) {
     }
 }
 
-function paintDivBlack(event) {
+function paintDiv(event) {
     if (event.buttons === 1 || event.type === 'click') {
         let elementTriggered = event.target;
-        elementTriggered.style.backgroundColor = 'black';
+        elementTriggered.style.backgroundColor = generateRandomRGB();
     }
+}
+
+function generateRandomRGB() {
+    let r = Math.round(Math.random() * 255);
+    let g = Math.round(Math.random() * 255);
+    let b = Math.round(Math.random() * 255);
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
 function linkDivsToListener() {
     const majorContainer = document.querySelector('.major-container');
     for (const row of majorContainer.children) {
         for (const innerDiv of row.children) {
-            innerDiv.addEventListener('mousemove', paintDivBlack);
-            innerDiv.addEventListener('click', paintDivBlack);
+            innerDiv.addEventListener('mousemove', paintDiv);
+            innerDiv.addEventListener('click', paintDiv);
         }
     }
 }
@@ -49,6 +56,7 @@ function askSizeOfGrid() {
     }   
 }
 
+console.log(generateRandomRGB());
 
 // Para hacer que se linkeen los cuadritos hay que
 // Iterar cada uno, y linkearlo con el event listener mousedown
