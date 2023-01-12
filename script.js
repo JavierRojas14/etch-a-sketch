@@ -34,11 +34,20 @@ function linkDivsToListener() {
 }
 
 function askSizeOfGrid() {
-    let sizeOfGrid = prompt('How big do you want the grid to be? (Maximum of 100)');
-    createSquareGrid(sizeOfGrid);
-    linkDivsToListener();
+    let sizeOfGrid = Number(prompt('How big do you want the grid to be? (Maximum of 100)'));
+    if (sizeOfGrid || sizeOfGrid === 0) {
+        if (sizeOfGrid < 1) {
+            alert('You cannot enter a number below 1');
+        } else if (sizeOfGrid > 100) {
+            alert('You cannot enter a number over 100');
+        } else {
+            createSquareGrid(sizeOfGrid);
+            linkDivsToListener();
+        }
+    } else {
+        alert('You entered an invalid character')
+    }   
 }
-
 
 
 // Para hacer que se linkeen los cuadritos hay que
